@@ -1,0 +1,14 @@
+{
+  "name": "dcam-regression",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.10.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "esbuild": "^0.21.4",
+    "typescript": "^5.4.5"
+  }
+}
