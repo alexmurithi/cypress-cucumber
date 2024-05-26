@@ -1,12 +1,12 @@
-const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
+import createBundler from '@bahmutov/cypress-esbuild-preprocessor';
 const {
   addCucumberPreprocessorPlugin,
-} = require("@badeball/cypress-cucumber-preprocessor");
+} = require('@badeball/cypress-cucumber-preprocessor');
 const {
   createEsbuildPlugin,
-} = require("@badeball/cypress-cucumber-preprocessor/esbuild");
+} = require('@badeball/cypress-cucumber-preprocessor/esbuild');
 
-export async function setupNodeEvents(
+export default async function setupNodeEvents(
   on: Cypress.PluginEvents,
   config: Cypress.PluginConfigOptions
 ): Promise<Cypress.PluginConfigOptions> {
@@ -14,7 +14,7 @@ export async function setupNodeEvents(
   await addCucumberPreprocessorPlugin(on, config);
 
   on(
-    "file:preprocessor",
+    'file:preprocessor',
     createBundler({
       plugins: [createEsbuildPlugin(config)],
     })
