@@ -1,11 +1,17 @@
 {
   "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "sourceMap": true,
     "allowJs": true,
     "target": "es5",
     "lib": ["ES5", "DOM"],
-    "types": ["cypress", "node"]
+    "types": ["cypress", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@utils/*": ["cypress/utils/*"]
+    }
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules"]
